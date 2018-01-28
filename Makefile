@@ -11,7 +11,7 @@ endif
 
 default: build
 
-.PHONY: buildimage build
+.PHONY: buildimage build run init create-cluster
 
 build: buildimage
 	$(DO) ./build/build.sh
@@ -21,3 +21,9 @@ buildimage:
 
 run: buildimage
 	$(DO) ./build/run.sh
+
+create-cluster:
+	./build/create-cluster.sh
+
+init: buildimage create-cluster
+	$(DO) ./build/init.sh

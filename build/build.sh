@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -xeuo pipefail
 
 go build -i -o bin/incluster-broker ./cmd/broker

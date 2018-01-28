@@ -14,4 +14,9 @@ RUN curl -sLO https://azuredraft.blob.core.windows.net/draft/draft-v0.10.0-linux
 RUN tar -zxvf draft-v0.10.0-linux-amd64.tar.gz
 RUN mv linux-amd64/draft /usr/local/bin/
 
+# Install Minikube
+RUN curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+RUN chmod +x minikube
+RUN mv minikube /usr/local/bin/
+
 WORKDIR /go/src/github.com/carolynvs/incluster-broker
