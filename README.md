@@ -1,6 +1,6 @@
 # InCluster Broker
 
-This is an implementation of the [Open Broker API](https://openbrokerapi.org)
+This is an implementation of the [Open Service Broker API](https://openservicebrokerapi.org)
 that is suited for local development. Instead of provisioning services
 from a cloud provider, it creates the service in a container on the cluster using Helm.
 
