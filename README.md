@@ -48,3 +48,21 @@ the commands locally, export `USE_DOCKER=false` and install the tools below:
 ## Deploy
 
 Compile and deploy the broker to your local cluster: `make run`.
+
+## Dependency Management
+
+We use [dep](https://golang.github.io/dep) to manage our dependencies. Our vendor
+directory is checked-in and kept up-to-date with Gopkg.lock, so unless you are
+actively changing dependencies, you don't need to do anything extra.
+
+### Add a new dependency
+
+1. Add the dependency.
+    * Import the dependency in the code OR
+    * Run `dep ensure --add github.com/pkg/example@v1.0.0` to add an explicit constraint
+       to Gopkg.toml.
+       
+       This is only necessary when we want to stick with a particular branch
+       or version range, otherwise the lock will keep us on the same version and track what's used.
+2. Run `dep ensure`.
+3. Check in the changes to `Gopkg.lock` and `vendor/`.
