@@ -20,3 +20,12 @@ The default Minikube driver is virtualbox, to use another specify it in
     "vm-driver": "xhyve"
 }
 ```
+
+## Initial Setup
+
+1. Create a Minikube cluster for local development: `make init`.
+2. Make sure everything is running: `kubectl get nodes --all-namespaces`.
+
+## Deploy
+
+Compile and deploy the broker to your local cluster: `make run`.
