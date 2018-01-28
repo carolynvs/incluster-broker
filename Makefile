@@ -11,13 +11,13 @@ endif
 
 default: build
 
-.PHONY: buildimage build run init create-cluster
-
-build: buildimage
-	$(DO) ./build/build.sh
+.PHONY: buildimage build run create-cluster init
 
 buildimage:
 	docker build -t $(DOCKER_IMG) ./build
+
+build: buildimage
+	$(DO) ./build/build.sh
 
 run: buildimage
 	$(DO) ./build/run.sh
