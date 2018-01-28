@@ -19,4 +19,7 @@ RUN curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mi
 RUN chmod +x minikube
 RUN mv minikube /usr/local/bin/
 
+# Install svcat
+RUN go get github.com/kubernetes-incubator/service-catalog/cmd/svcat
+
 WORKDIR /go/src/github.com/carolynvs/incluster-broker

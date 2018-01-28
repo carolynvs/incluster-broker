@@ -21,7 +21,8 @@ buildimage:
 
 run: buildimage
 	$(DO) ./build/run.sh
-
+	$(DO) svcat get brokers
+	
 create-cluster:
 	./build/create-cluster.sh
 

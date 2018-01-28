@@ -1,6 +1,6 @@
 [environments]
   [environments.development]
-    name = "broker"
+    name = "incluster-broker"
     namespace = "default"
     wait = false
     watch = false
