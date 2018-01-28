@@ -15,14 +15,13 @@ TODO: Example manifests to create a mysql db.
 ## Requirements
 
 * Docker
-* Minikube v0.24.1
+* [Minikube v0.24.1](https://github.com/kubernetes/minikube/releases/tag/v0.24.1)
 
 On a Mac you will also need either VirtualBox installed,
-or the Minikube xhyve driver (to use the hypervisor that comes with Docker for Mac).
+or the [Minikube xhyve driver](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#xhyve-driver)
+which uses the hypervisor that comes with Docker for Mac.
 
-https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#xhyve-driver 
-
-The default Minikube driver is virtualbox, to use another specify it in
+The default Minikube driver is virtualbox, to use xhyve specify it in
 **~/.minikube/config/config.json**:
 
 ```json
